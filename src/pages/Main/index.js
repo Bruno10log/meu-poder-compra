@@ -11,42 +11,53 @@ export default function() {
 
     return(
         <>
-            <Container>
+            <Container id="container">
                 <div>
                     <div>
                         <h2>
                             Onde Moro
                         </h2>
-               
-                        <input value={income} 
+                        
+                        <input value={income}
+                               tabIndex={'1'} 
                                onChange={(e)=> setIncome(e.target.value)} 
                                placeholder={'Salário'}
                                type="number" />
                         
                         <input value={price} 
+                               tabIndex={'2'}
                                onChange={(e)=> setPrice(e.target.value)}
                                placeholder={'Preço'} 
                                type="number" />
                     </div>
                     <div>
-                        <h2>
-                            Onde quero Morar
-                        </h2>
+
+                        <span >
+                            <h2>
+                                Onde quero Morar
+                            </h2>
+                        </span>
                
-                        <input value={newIncome} 
+                        <input value={newIncome}
+                               tabIndex={'3'} 
                                onChange={(e)=> setNewIncome(e.target.value)}
                                placeholder={'Salário'}
                                type="number" />
                 
-                        <input value={newPrice} 
+                        <input value={newPrice}
+                               tabIndex={'4'} 
                                onChange={(e)=> setNewPrice(e.target.value)} 
                                placeholder={'Preço'} 
                                type="number" />
             
                     </div>
                 </div>                
-
-                <CalcButton disabled={!(income && price && newIncome && newPrice)} onClick={calc}>Calcular</CalcButton>
+                
+                <CalcButton tabIndex={'5'} 
+                            disabled={!(income && price && newIncome && newPrice)} 
+                            onClick={calc}>
+                                CALCULAR
+                </CalcButton>
 
                 {result &&
                     <ResultContainer>
