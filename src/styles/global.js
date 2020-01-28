@@ -18,10 +18,11 @@ export default createGlobalStyle`
     }
 
     header {
-
+        
         @media only screen and (max-width: 768px) {
-            font-size: 40px;
+            font-size: 28px;
         }
+
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
         cursor: pointer;
@@ -37,7 +38,7 @@ export default createGlobalStyle`
         justify-content: center;
         &:hover {
             border-color: #6DEBCD;
-            transform: translate(0%, -10%);
+            transform: translate(0%, -5%);
             transition: 0.3s ease-out;
         }
     }

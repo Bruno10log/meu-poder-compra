@@ -78,6 +78,7 @@ export const CalcButton = styled.button`
     color: #fff;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin-top: 4%;
     height: 70px;
     
