@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Container, CalcButton, ResultContainer } from './styles';
+import { useTranslation } from 'react-i18next';
+
 
 export default function() {
 
@@ -9,45 +11,47 @@ export default function() {
     const [newPrice, setNewPrice] = useState();
     const [result, setResult] = useState();
 
+    const { t } = useTranslation('common');
+
     return(
         <>
             <Container id="container">
                 <div>
                     <div>
                         <h2>
-                            Onde Moro
+                            {t('whereILive')}
                         </h2>
                         
                         <input value={income}
                                tabIndex={'1'} 
                                onChange={(e)=> setIncome(e.target.value)} 
-                               placeholder={'Salário'}
+                               placeholder={t('income')}
                                type="number" />
                         
                         <input value={price} 
                                tabIndex={'2'}
                                onChange={(e)=> setPrice(e.target.value)}
-                               placeholder={'Preço'} 
+                               placeholder={t('price')} 
                                type="number" />
                     </div>
                     <div>
 
                         <span >
                             <h2>
-                                Onde quero Morar
+                                {t('whereIwantToMove')}
                             </h2>
                         </span>
                
                         <input value={newIncome}
                                tabIndex={'3'} 
                                onChange={(e)=> setNewIncome(e.target.value)}
-                               placeholder={'Salário'}
+                               placeholder={t('income')}
                                type="number" />
                 
                         <input value={newPrice}
                                tabIndex={'4'} 
                                onChange={(e)=> setNewPrice(e.target.value)} 
-                               placeholder={'Preço'} 
+                               placeholder={t('price')} 
                                type="number" />
             
                     </div>
@@ -56,7 +60,7 @@ export default function() {
                 <CalcButton tabIndex={'5'} 
                             disabled={!(income && price && newIncome && newPrice)} 
                             onClick={calc}>
-                                CALCULAR
+                                { t('calc') }
                 </CalcButton>
 
                 {result &&

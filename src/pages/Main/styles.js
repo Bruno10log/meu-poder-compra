@@ -1,4 +1,4 @@
- import styled, {keyframes, css} from 'styled-components';
+ import styled from 'styled-components';
 
 export const Container = styled.div`
     max-width: 750px;
@@ -16,8 +16,7 @@ export const Container = styled.div`
         margin: 0;
     }
 
-    div{
-        
+    div{   
         @media only screen and (min-width: 768px) {
             flex-direction: row;
         }
@@ -66,12 +65,9 @@ export const Container = styled.div`
             }
         }
     }
-
-    
 `;
 
 export const CalcButton = styled.button`
-
     background: #A5E4E8;
     border-radius: 15px;
     font-size: 30px;
