@@ -6,7 +6,11 @@
             "income": "Salário",
             "price": "Preço",
             "whereIwantToMove": "Onde quero Morar",
-            "calc": "calcular"
+            "calc": "calcular",
+            "cost1": "Seu poder de compra atual",
+            "cost2": "Seu novo poder de compra",
+            "increase": "Seu poder de compra irá aumentar em",
+            "decrease": "Seup oder de compra irá diminuir em" 
         }
     }
 }

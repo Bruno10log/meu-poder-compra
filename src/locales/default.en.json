@@ -1,12 +1,16 @@
 {
     "en": {
         "en": {
-            "header": "My Purshasing Power",
+            "header": "My Purchasing Power",
             "whereILive": "Where I live",
             "income": "Income",
             "price": "Price",
             "whereIwantToMove": "Where I want to move",
-            "calc": "calculate"
+            "calc": "calculate",
+            "cost1": "Your purchasing power now a days",
+            "cost2": "Your new purchasing power",
+            "powerIncrease": "Your purchasing power will increase in",
+            "powerDecrease": "Your purchasing power will decrease in"
         }
     }
 }

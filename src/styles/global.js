@@ -17,15 +17,11 @@ export default createGlobalStyle`
         opacity: 0.989;
     }
 
-
-
     body {
         background: #A5E4E8;
         -webkit-font-smoothing: antialised !important;
         background-image: url(${img});
     }
-
-
 
     button {
         cursor: pointer;
@@ -43,6 +39,6 @@ export default createGlobalStyle`
 
     /* Firefox */
     input[type=number] {
-    -moz-appearance:textfield;
+        -moz-appearance:textfield;
     }
 `;
