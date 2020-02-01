@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import { Container, CalcButton, ResultContainer } from './styles';
 import { useTranslation } from 'react-i18next';
-
 
 export default function() {
 
@@ -11,7 +10,16 @@ export default function() {
     const [newPrice, setNewPrice] = useState();
     const [result, setResult] = useState();
 
+    const returnRef = useRef(null);
+
     const { t } = useTranslation('common');
+
+    useEffect(() => {
+        if(returnRef.current) {
+            const pos = returnRef.current.offsetTop;
+            window.scrollTo(0, pos);
+        }
+    }, [result]);
 
     return(
         <>
@@ -35,7 +43,6 @@ export default function() {
                                type="number" />
                     </div>
                     <div>
-
                         <span >
                             <h2>
                                 {t('whereIwantToMove')}
@@ -53,7 +60,6 @@ export default function() {
                                onChange={(e)=> setNewPrice(e.target.value)} 
                                placeholder={t('price')} 
                                type="number" />
-            
                     </div>
                 </div>                
                 
@@ -64,8 +70,10 @@ export default function() {
                 </CalcButton>
 
                 {result &&
-                    <ResultContainer>
-                        <label>Seu poder de compra irá aumentar em: { result.toFixed(2) } </label> 
+                    <ResultContainer ref={returnRef}>
+                        <label>
+                            Seu poder de compra irá aumentar em: { result.toFixed(2) }
+                        </label> 
                     </ResultContainer>
                 }
 
@@ -74,13 +82,14 @@ export default function() {
     )
 
     function calc() {
+       
         var calc1 = price / income;
         var calc2 = newPrice / newIncome;
 
         console.log('calc1', calc1);
         console.log('calc2', calc2);
 
-        setResult(calc1 - calc2);
+        setResult(calc1 - calc2);       
     }
 
 }

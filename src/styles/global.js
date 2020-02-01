@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components';
-import img from  '../img/money3.jpg';
+import img from  '../img/money_world.jpg';
 
 export default createGlobalStyle`
 

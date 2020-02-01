@@ -1,9 +1,9 @@
 import React from 'react';
-import Main from './pages/Main';
+import Main from './components/Main';
 import GlobalStyle from './styles/global';
 import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
-import Header from './pages/Header';
+import Header from './components/Header';
 
 function App() {
 
