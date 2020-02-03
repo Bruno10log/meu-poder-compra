@@ -1,12 +1,10 @@
  import styled from 'styled-components';
 
 export const Container = styled.div`
+   
     max-width: 750px;
     border-radius: 7px;
-    padding: 15px;
-    margin:100px auto;
     flex-direction: column;
-    display: flex;
 
     @media only screen and (max-width: 768px) {
         div:nth-child(2) {
@@ -77,6 +75,7 @@ export const CalcButton = styled.button`
     align-items: center;
     margin-top: 4%;
     height: 70px;
+    width: 100%;
     
     &:hover {
         border-color: #6DEBCD;

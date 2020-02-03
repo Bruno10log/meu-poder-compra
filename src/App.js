@@ -5,6 +5,7 @@ import { I18nextProvider } from 'react-i18next';
 import i18n from './i18n';
 import Header from './components/Header';
 import InfoAccordion from './components/InfoAccordion';
+import './App.css';
 
 function App() {
   return (
@@ -12,9 +13,7 @@ function App() {
       <I18nextProvider i18n={i18n}>
           <Header/>
           <GlobalStyle/>
-          <div style={{display:'flex', 
-                       flexDirection: 'row', 
-                       marginTop: 100}}>
+          <div className="container">
             <InfoAccordion/>
             <Main/>
           </div>
