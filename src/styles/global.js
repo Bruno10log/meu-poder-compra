@@ -3,13 +3,12 @@ import img from  '../img/money_world.jpg';
 
 export default createGlobalStyle`
 
-    @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
-
     *{
         outline: 0;
         box-sizing: border-box;
         font-family:  arial;
         font-weight: bold;
+        user-select: none;
     }
 
     html, body, #root {
@@ -18,7 +17,7 @@ export default createGlobalStyle`
     }
 
     body {
-        background: #A5E4E8;
+        background: #000;
         -webkit-font-smoothing: antialised !important;
         background-image: url(${img});
     }
@@ -30,6 +29,7 @@ export default createGlobalStyle`
     ::selection {
         background: #6DEBCD;
     }
+    
     /* Chrome, Safari, Edge, Opera */
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {

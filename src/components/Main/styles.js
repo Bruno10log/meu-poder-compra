@@ -76,7 +76,8 @@ export const CalcButton = styled.button`
     margin-top: 4%;
     height: 70px;
     width: 100%;
-    
+    text-transform: uppercase;
+
     &:hover {
         border-color: #6DEBCD;
         transform: translate(0%, -2%);

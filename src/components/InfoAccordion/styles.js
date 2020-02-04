@@ -39,9 +39,13 @@ export const Accordion = styled.div`
         padding: 0 18px;
         color: gray;
         background-color: white;
-        display: ${props => props.expand ? 'block' : 'none'} ;
+        visibility: ${props => props.expand ? 'visible' : 'hidden'} ;
         overflow: hidden;
+        opacity: ${props=> props.expand ? 1 : 0};
+        transition: visibility 0s, opacity 0.5s linear;
     }
+
+    
 `;
 
 
